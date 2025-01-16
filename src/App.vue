@@ -4,14 +4,11 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
+    <a href="https://infinitech.lv" target="_blank">
       <img src="/logo_blue_favicon_2.svg" class="logo" alt="Infinitech logo" />
     </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="Under maintenance..." />
 </template>
 
 <style scoped>
