@@ -1,0 +1,172 @@
+.hamburger-menu {
+    display: none;
+    position: relative;
+    width: var(--bar-width);
+    height: calc(var(--bar-height) * 2 + var(--hamburger-gap));
+    cursor: pointer;
+}
+
+.hamburger-menu input {
+    /* visually hidden but accessible */
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background: var(--blue-1000);
+    border-radius: 2px;
+    transition: transform var(--animation-timing);
+    transform-origin: center center;
+    /* Initial hamburger position: offset up/down by half the gap + half bar height */
+}
+
+.hamburger-menu::before {
+    transform: translateY(calc(-1 * ((var(--hamburger-gap) + var(--bar-height)) / 2)));
+}
+
+.hamburger-menu::after {
+    transform: translateY(calc((var(--hamburger-gap) + var(--bar-height)) / 2));
+}
+
+/* When checked: rotate both bars into an X, both centered */
+.hamburger-menu:has(input:checked)::before {
+    transform: rotate(45deg);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    transform: rotate(-45deg);
+}
+
+.hamburger-menu:has(input:checked)+.header-nav {
+    /* When the hamburger is checked, translate the nav down */
+    translate: 0 0;
+    transition: transform var(--animation-timing);
+}
+
+/* ────────────────────────────
+   REST OF HEADER STYLES
+───────────────────────────── */
+
+.logo-text {
+    font-family: "Switzer", "Switzer Placeholder", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.header-nav {
+    position: fixed;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    margin: 24px auto;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    border: 1px solid var(--blue-300);
+    border-radius: 999px;
+    padding: 16px;
+    background-color: var(--blue-100);
+    backdrop-filter: blur(6px);
+    z-index: 3;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-button-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 9999px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    border: none;
+    font-family: Switzer-regular, sans-serif;
+    font-size: 16px;
+    text-wrap: nowrap;
+}
+
+.header-button:hover {
+    background-color: var(--blue-200);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 760px) {
+    .hamburger-menu {
+        display: block;
+        top: 28px;
+        right: 24px;
+        position: absolute;
+        align-self: flex-start;
+        z-index: 10;
+    }
+
+    .logo-link {
+        align-self: flex-start;
+    }
+
+    .header-nav {
+        /* Keep flex for both desktop & mobile, just change direction */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-radius: 0;
+        margin: 0;
+        padding: 16px 16px 0 16px;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition:
+            padding var(--animation-timing),
+            background-color var(--animation-timing);
+    }
+
+    .header-button-container {
+        width: 100%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: max-height var(--animation-timing), opacity var(--animation-timing), padding-bottom var(--animation-timing);
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 16px;
+    }
+
+    .header-action-button-container {
+        display: none;
+    }
+
+    /* Show/expand menu on hamburger checked */
+    .header-nav:has(.hamburger-menu input:checked) .header-button-container {
+        max-height: 400px;
+        opacity: 1;
+        pointer-events: auto;
+        transition: max-height var(--animation-timing), opacity var(--animation-timing), padding-bottom var(--animation-timing);
+    }
+}

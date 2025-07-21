@@ -1,0 +1,92 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.logo-text {
+    font-family: "Switzer", "Switzer Placeholder", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 32px;
+    padding-top: 56px;
+    padding-bottom: 16px;
+    background-color: white;
+    width: 100%;
+    margin-top: 36px;
+    border-top: 0.5px solid var(--blue-300);
+}
+
+.footer-copyright {
+    display: flex;
+    border-top: 0.5px solid var(--blue-300);
+    padding: 32px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-button-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    background-color: transparent;
+    border: none;
+    font-family: Switzer-regular, sans-serif;
+    font-size: 16px;
+    text-wrap: nowrap;
+}
+
+.footer-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--blue-700);
+}
+
+.media-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 760px) {
+    .logo-link {
+        align-self: flex-start;
+    }
+
+    .footer-button-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

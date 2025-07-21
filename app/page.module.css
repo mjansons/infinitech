@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 120px 0 0 0;
+    width: 100%;
+    padding: 0;
+}
+
+.main section {
+    scroll-margin-top: 103px;
+}
+
+@media screen and (max-width: 760px) {
+    .main section {
+        scroll-margin-top: 73px;
+    }
+}
