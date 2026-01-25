@@ -1,10 +1,11 @@
 .carousel {
     position: relative;
     overflow: hidden;
-    padding: 16px 0;
+    padding: 0;
     background: #fff;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 1000px;
+    width: 100%;
 }
 
 .logo-carousel-track {
@@ -20,8 +21,9 @@
 }
 
 .carousel-img {
-    height: 24px;
+    height: 100px;
     margin-right: 64px;
+    cursor: pointer;
 }
 
 .carousel::before,

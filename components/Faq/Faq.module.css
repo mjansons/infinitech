@@ -69,6 +69,7 @@
     align-items: center;
     height: 24px;
     width: 24px;
+    transform: rotate(180deg); /* Start rotated */
 }
 
 /* FAQ ANSWER: waits 1s then fades in, hides instantly on collapse */
@@ -97,5 +98,5 @@
 }
 
 .faq-item:has(.faq-checkbox:checked) .tick-icon {
-    transform: rotate(180deg);
+    transform: rotate(0deg); /* Rotate back when open */
 }

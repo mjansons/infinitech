@@ -37,8 +37,8 @@ export default function Faq({ sectionId }: Props) {
                     </div>
                     <div className={styles["faq-answer"]}>
                         We specialize in building scalable web applications
-                        using modern technologies such as React for the frontend
-                        and Node.js for the backend. This approach ensures fast
+                        using modern technologies such as React, Vue, Nest.js and Next.js for the frontend
+                        and GO or Node.js for the backend. This approach ensures fast
                         performance, reliability, and a foundation that can grow
                         as your business evolves.
                     </div>

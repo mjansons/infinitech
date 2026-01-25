@@ -21,7 +21,7 @@ export default function Results({ sectionId }: Props) {
             <div className={classNames(styles["grid-container"])}>
                 <div className={classNames(styles["grid-item"])}>
                     <img src="/svgexport-9.svg" alt="clock" />
-                    <h1>5+</h1>
+                    <h1>10+</h1>
                     <p>Years of experience</p>
                 </div>
                 <div className={classNames(styles["grid-item"])}>

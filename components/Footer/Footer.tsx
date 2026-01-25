@@ -68,7 +68,7 @@ export default function Header({ sectionButtons }: Props) {
                 </div>
             </nav>
             <div className={classNames(styles["footer-copyright"])}>
-                <span>© 2025 — SIA infinitech</span>
+                <span>© 2026 — SIA infinitech</span>
                 <span>Latvia, Riga</span>
             </div>
         </div>
