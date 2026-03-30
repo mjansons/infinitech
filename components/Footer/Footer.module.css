@@ -26,6 +26,31 @@
     border-top: 0.5px solid var(--blue-300);
 }
 
+.right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-legal-link {
+    font-family: Switzer-regular, sans-serif;
+    font-size: 14px;
+    color: var(--foreground);
+    opacity: 0.5;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.footer-legal-link:hover {
+    opacity: 1;
+    color: var(--blue-700);
+}
+
 .footer-copyright {
     display: flex;
     border-top: 0.5px solid var(--blue-300);
@@ -75,8 +100,6 @@
 .media-icon-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    align-self: flex-start;
     justify-content: flex-end;
 }
 

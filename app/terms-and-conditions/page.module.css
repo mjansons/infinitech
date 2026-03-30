@@ -1,0 +1,86 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 0 0 0;
+  width: 100%;
+  padding: 0;
+}
+
+.article {
+  max-width: 760px;
+  width: 100%;
+  padding: 0 32px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.centered {
+  align-self: center;
+}
+
+.article h1 {
+  font-family: "Switzer", "Switzer Placeholder", sans-serif;
+  font-size: 40px;
+  color: var(--blue-1000);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.updated {
+  font-size: 14px;
+  opacity: 0.5;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.article section {
+  margin-bottom: 32px;
+}
+
+.article h2 {
+  font-family: "Switzer", "Switzer Placeholder", sans-serif;
+  font-size: 20px;
+  color: var(--blue-1000);
+  margin-bottom: 12px;
+}
+
+.article p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--foreground);
+  margin-bottom: 12px;
+}
+
+.article ul {
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
+.article li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--foreground);
+  margin-bottom: 6px;
+}
+
+.article a {
+  color: var(--blue-700);
+  text-decoration: underline;
+}
+
+.article a:hover {
+  color: var(--blue-900);
+}
+
+@media screen and (max-width: 768px) {
+  .article h1 {
+    font-size: 28px;
+  }
+
+  .article {
+    padding: 0 20px 48px;
+  }
+}

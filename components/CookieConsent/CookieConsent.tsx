@@ -50,7 +50,12 @@ export default function CookieConsent() {
               <p className={styles.text}>
                 We use cookies to enhance your browsing experience, serve
                 personalized content, and analyze our traffic. By clicking
-                &quot;Accept All&quot;, you consent to our use of cookies.
+                &quot;Accept All&quot;, you consent to our use of cookies. Read
+                our{" "}
+                <a href="/privacy-policy" className={styles.link}>
+                  Privacy Policy
+                </a>
+                .
               </p>
             </div>
             <div className={styles.actions}>

@@ -41,7 +41,7 @@ export default function Header({ sectionButtons }: Props) {
             <div className={classNames(styles["header-button-container"])}>
                 {Object.values(sectionButtons).map((el) => (
                     <a
-                        href={"#"+ el.href}
+                        href={"/#" + el.href}
                         className={classNames(styles["header-button"])}
                         key={el.href}
                     >
@@ -53,7 +53,7 @@ export default function Header({ sectionButtons }: Props) {
             <div
                 className={classNames(styles["header-action-button-container"])}
             >
-                <SlidingButton text="Contact us" href="#contact-us" />
+                <SlidingButton text="Contact us" href="/#contact-us" />
             </div>
 
             <label className={styles["hamburger-menu"]}>

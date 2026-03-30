@@ -49,7 +49,7 @@ export default function Header({ sectionButtons }: Props) {
                     >
                         {Object.values(sectionButtons).map((el) => (
                             <a
-                                href={"#" + el.href}
+                                href={"/#" + el.href}
                                 className={classNames(styles["footer-button"])}
                                 key={el.href}
                             >
@@ -58,13 +58,23 @@ export default function Header({ sectionButtons }: Props) {
                         ))}
                     </div>
                 </div>
-                <div className={classNames(styles["media-icon-container"])}>
-                    <a
-                        target="_blank"
-                        href="https://www.linkedin.com/company/infinitech-lv/about/"
-                    >
-                        <img src="/linkedin.svg" alt="linkedin" />
-                    </a>
+                <div className={classNames(styles["right-container"])}>
+                    <div className={classNames(styles["media-icon-container"])}>
+                        <a
+                            target="_blank"
+                            href="https://www.linkedin.com/company/infinitech-lv/about/"
+                        >
+                            <img src="/linkedin.svg" alt="linkedin" />
+                        </a>
+                    </div>
+                    <div className={classNames(styles["footer-legal"])}>
+                        <a href="/privacy-policy" className={classNames(styles["footer-legal-link"])}>
+                            Privacy Policy
+                        </a>
+                        <a href="/terms-and-conditions" className={classNames(styles["footer-legal-link"])}>
+                            Terms &amp; Conditions
+                        </a>
+                    </div>
                 </div>
             </nav>
             <div className={classNames(styles["footer-copyright"])}>
