@@ -5,7 +5,7 @@
   right: 0;
   z-index: 9999;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   padding: 24px;
   animation: slideUp 0.4s ease-out;
 }
@@ -28,8 +28,7 @@
   border: 1px solid var(--blue-300);
   border-radius: 16px;
   padding: 24px 32px;
-  max-width: 720px;
-  width: 100%;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -63,6 +62,7 @@
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+  justify-content: center
 }
 
 .btnAccept {
@@ -86,27 +86,6 @@
 
 .btnAccept:hover {
   background-color: var(--blue-900);
-}
-
-.btnReject {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 24px;
-  border-radius: 9999px;
-  border: 1px solid var(--blue-300);
-  background-color: transparent;
-  font-family: "Switzer-regular", sans-serif;
-  font-size: 14px;
-  color: var(--foreground);
-  cursor: pointer;
-  height: 40px;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.btnReject:hover {
-  background-color: var(--blue-100);
-  border-color: var(--blue-500);
 }
 
 .btnPreferences {
@@ -207,7 +186,6 @@
   }
 
   .btnAccept,
-  .btnReject,
   .btnPreferences {
     width: 100%;
   }

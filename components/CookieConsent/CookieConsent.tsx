@@ -26,13 +26,7 @@ export default function CookieConsent() {
     setVisible(false);
   };
 
-  const rejectAll = () => {
-    const minimal = { necessary: true, analytics: false, marketing: false };
-    localStorage.setItem("cookie-consent", JSON.stringify(minimal));
-    setVisible(false);
-  };
-
-  const savePreferences = () => {
+const savePreferences = () => {
     localStorage.setItem("cookie-consent", JSON.stringify(preferences));
     setVisible(false);
     setShowPreferences(false);
@@ -62,14 +56,11 @@ export default function CookieConsent() {
               <button className={styles.btnAccept} onClick={acceptAll}>
                 Accept All
               </button>
-              <button className={styles.btnReject} onClick={rejectAll}>
-                Reject All
-              </button>
               <button
                 className={styles.btnPreferences}
                 onClick={() => setShowPreferences(true)}
               >
-                Manage Preferences
+                Customize
               </button>
             </div>
           </>
